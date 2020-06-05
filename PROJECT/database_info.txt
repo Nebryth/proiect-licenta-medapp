@@ -1,0 +1,6 @@
+========================= Database INFO =========================
+Database: medical-project
+Schema: thesis-proj-schema
+User: user123
+Password: newPassword123!
+
