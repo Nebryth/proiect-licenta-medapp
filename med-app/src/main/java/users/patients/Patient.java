@@ -1,6 +1,5 @@
-package patients;
+package users.patients;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
@@ -20,12 +19,19 @@ public class Patient {
     private String firstName;
     @Column(name = "last_name")
     private String lastName;
-    private String email;
-    private @JsonIgnore
-    String password;
     private String telephone;
     private String address;
-    private Date birthdate;
+    private Date birthday;
+    @Column(name = "user_id")
+    private Integer userId;
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
 
     public Integer getId() {
         return id;
@@ -51,22 +57,6 @@ public class Patient {
         this.lastName = lastName;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password, Boolean hash) {
-        this.password = hash ? PASSWORD_ENCODER.encode(password) : password;
-    }
-
     public String getTelephone() {
         return telephone;
     }
@@ -83,11 +73,11 @@ public class Patient {
         this.address = address;
     }
 
-    public Date getBirthdate() {
-        return birthdate;
+    public Date getBirthday() {
+        return birthday;
     }
 
-    public void setBirthdate(Date birthdate) {
-        this.birthdate = birthdate;
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
     }
 }
