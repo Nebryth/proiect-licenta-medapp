@@ -3,8 +3,8 @@ package project_root.utilities.logging_in;
 public class LoginRequestModel {
     private String email;
     private String password;
-    private boolean using2FA;
-    private String secretKey;
+    //private boolean using2FA;
+  //  private String secretKey;
 
     public String getEmail() {
         return email;
@@ -22,15 +22,15 @@ public class LoginRequestModel {
         this.password = password;
     }
 
-    public String getSecretKey() {
-        return secretKey;
-    }
-
-    public void setSecretKey(String secretKey) {
-        this.secretKey = secretKey;
-    }
-
-    public boolean getUsing2FA() { return using2FA; }
-
-    public void setUsing2FA(boolean using2FA) { this.using2FA = using2FA; }
+//    public String getSecretKey() {
+//        return secretKey;
+//    }
+//
+//    public void setSecretKey(String secretKey) {
+//        this.secretKey = secretKey;
+//    }
+//
+//    public boolean getUsing2FA() { return using2FA; }
+//
+//    public void setUsing2FA(boolean using2FA) { this.using2FA = using2FA; }
 }

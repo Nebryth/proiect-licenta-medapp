@@ -2,6 +2,7 @@ package project_root.user;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
@@ -19,8 +20,8 @@ import java.time.LocalDateTime;
 @CrossOrigin(origins = "*")
 @RequestMapping("/api")
 public class UserController {
-    private Gson gson = new GsonBuilder().serializeSpecialFloatingPointValues().serializeNulls().create();
-
+    private final Gson gson = new GsonBuilder().serializeSpecialFloatingPointValues().serializeNulls().create();
+    @Autowired(required = true)
     private UserRepository userRepository;
     public static final PasswordEncoder PASSWORD_ENCODER = new BCryptPasswordEncoder();
 

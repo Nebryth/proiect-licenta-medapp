@@ -7,7 +7,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import javax.persistence.*;
 
 @Entity
-@Table(schema = "thesis-proj-schema", name = "proj.users")
+@Table(schema = "thesis-proj-schema", name = "users")
 public class UserModel {
 
     public static final PasswordEncoder PASSWORD_ENCODER = new BCryptPasswordEncoder();
