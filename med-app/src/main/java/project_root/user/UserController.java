@@ -5,6 +5,7 @@ import com.google.gson.GsonBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import project_root.utilities.logging_in.LoggedIn;
 import project_root.utilities.logging_in.LoginRequestModel;
@@ -16,12 +17,13 @@ import java.time.LocalDateTime;
 /**
  * Holds together the implementations for the methods specified in the UserRepository
  */
-@RestController
+@Controller
 @CrossOrigin(origins = "*")
 @RequestMapping("/api")
 public class UserController {
     private final Gson gson = new GsonBuilder().serializeSpecialFloatingPointValues().serializeNulls().create();
-    @Autowired(required = true)
+
+    @Autowired
     private UserRepository userRepository;
     public static final PasswordEncoder PASSWORD_ENCODER = new BCryptPasswordEncoder();
 
