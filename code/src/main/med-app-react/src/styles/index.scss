@@ -1,0 +1,38 @@
+// import variables first
+@import "variables";
+
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "Main";
+@import "LoginForm";
+@import "Sidebar";
+
+
+html {
+  height: 100%;
+}
+
+body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: $main-background;
+  color: $main-default-color;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.table-wrapper-scroll-y {
+  display: block;
+  max-height: 300px;
+  overflow-y: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  }

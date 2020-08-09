@@ -1,0 +1,13 @@
+@import "variables";
+
+.medapp-title {
+  padding-top: 11.25rem;
+  font-size: 5.5rem;
+  color: $text-title-color;
+}
+
+.medapp-subtitle {
+  margin-top: 5.625rem;
+  font-size: 1.875rem;
+  color: $text-description-color;
+}
